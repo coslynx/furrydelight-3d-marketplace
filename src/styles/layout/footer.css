@@ -1,0 +1,43 @@
+/* src/styles/layout/footer.css */
+
+/* Base styling for the footer */
+.footer {
+  @apply fixed bottom-0 left-0 w-full z-40 transition-colors duration-300;
+  /* Ensure it stays at the bottom and transitions smoothly */
+}
+
+/* Theme-aware styling for light and dark modes */
+.footer {
+  @apply bg-gray-900 text-white border-t border-gray-700;
+  /* Default dark mode styles */
+}
+
+/* Overwrite the class with a more specific one for each mode */
+:root .footer {
+  @apply bg-white text-gray-900 border-t border-gray-200;
+  /* Default light mode styles */
+}
+
+/* Container within the footer */
+.footer .container {
+  @apply mx-auto px-4 py-3 flex items-center justify-between;
+  /* Center content and distribute space */
+}
+
+/* Copyright text styling */
+.footer p {
+  @apply text-sm;
+  /* Reduce text size */
+}
+
+/* Navigation links container */
+.footer nav {
+  @apply flex items-center space-x-4;
+  /* Align items and add horizontal spacing */
+}
+
+/* Individual navigation links */
+.footer nav a {
+  @apply text-sm hover:text-blue-500 transition-colors duration-200;
+  /* Link styles with hover effect */
+}
