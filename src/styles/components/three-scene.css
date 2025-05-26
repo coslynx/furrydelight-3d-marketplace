@@ -1,0 +1,25 @@
+/* src/styles/components/three-scene.css */
+/* Container for the Three.js scene */
+.three-scene-container {
+  @apply relative w-full h-full overflow-hidden flex items-center justify-center;
+  /* Position the container, occupy full space, and center content */
+}
+/* Canvas styling */
+.three-scene-container > canvas {
+  @apply absolute top-0 left-0 w-full h-full z-[-1] outline-none;
+  /* Position canvas absolutely, fill container, and remove outline */
+}
+/* Performance optimization for dynamic transformations */
+.three-scene-element {
+  will-change: transform;
+  /* Improve performance of dynamic transformations */
+}
+/* Ensure proper focus styles */
+.three-scene-container:focus{
+outline: 2px solid theme('colors.blue.500');
+outline-offset: 2px;
+}
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  /* Reduced margins and font sizes for smaller screens */
+}
