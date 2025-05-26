@@ -1,0 +1,71 @@
+/* src/styles/pages/model-showcase.css */
+
+/* Base styles for the entire page */
+.model-showcase-page {
+  @apply container mx-auto px-4 py-8;
+}
+
+/* Styles for the list of available models */
+.model-showcase-page .model-list {
+  @apply mb-8;
+}
+
+.model-showcase-page .model-list h2 {
+  @apply text-2xl font-semibold text-gray-800 mb-4;
+}
+
+.model-showcase-page .model-list ul {
+  @apply space-y-2;
+}
+
+.model-showcase-page .model-list li {
+  @apply text-blue-500 hover:text-blue-700 cursor-pointer transition-colors duration-200;
+}
+
+/* Styles for the 3D model viewer and description */
+.model-showcase-page .model-viewer {
+  @apply relative;
+}
+
+.model-showcase-page .model-viewer h3 {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.model-showcase-page .model-viewer .model-description {
+  @apply text-gray-700 mb-4;
+}
+
+/* 3D Canvas Integration */
+.model-showcase-page .model-viewer canvas {
+  @apply absolute top-0 left-0 w-full h-full z-0;
+}
+
+/* Ensure the 3D container takes up the available space */
+.model-showcase-page .model-viewer > div {
+  @apply relative w-full h-64 md:h-96 lg:h-128 overflow-hidden;
+}
+
+/* GPU Optimization */
+.model-showcase-page .model-viewer > div {
+  will-change: transform;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+  .model-showcase-page {
+    @apply flex;
+  }
+
+  .model-showcase-page .model-list {
+    @apply w-1/4 flex-shrink-0 pr-8;
+  }
+
+  .model-showcase-page .model-viewer {
+    @apply w-3/4;
+  }
+}
+
+/* Accessibility */
+.model-showcase-page .model-list li:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-opacity-50;
+}
