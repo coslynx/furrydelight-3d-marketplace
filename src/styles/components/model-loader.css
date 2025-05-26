@@ -1,0 +1,62 @@
+/* src/styles/components/model-loader.css */
+
+/* Container for the loading indicator */
+.model-loader-container {
+  @apply relative flex items-center justify-center h-64;
+}
+
+/* Spinner Styles */
+.model-loader-spinner {
+  @apply border-t-4 border-blue-500 border-solid rounded-full animate-spin;
+  width: 3rem;
+  height: 3rem;
+  border-right-color: transparent;
+  will-change: transform;
+}
+
+/* Add animation variables for customization */
+.model-loader-spinner {
+  --spinner-color: theme('colors.blue.500');
+  --spinner-speed: 1s;
+  border-top-color: var(--spinner-color);
+  animation: model-loader-spin var(--spinner-speed) linear infinite;
+}
+
+/* Keyframes for the spinner animation */
+@keyframes model-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .model-loader-container {
+    @apply h-48; /* Reduce height for smaller screens */
+  }
+  .model-loader-spinner {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .model-loader-container {
+    @apply h-80; /* Adjust height for tablet screens */
+  }
+  .model-loader-spinner {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* Accessibility Enhancements */
+.model-loader-container::before {
+  content: "Loading 3D Model...";
+  @apply absolute text-sm text-gray-600 dark:text-gray-400;
+  /* Ensure adequate contrast */
+  color: theme('colors.gray.600');
+  /* Visually hide while maintaining accessibility */
+  opacity: 0;
+}
