@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Reset - Modern and Comprehensive */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+min-height: 100vh;
+text-rendering: optimizeSpeed;
+line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+overflow-wrap: break-word;
+}
+
+ol,
+ul {
+list-style: none;
+}
+
+/* Accessibility improvements */
+:focus:not(:focus-visible) {
+outline: none;
+}
+
+/* Base Typography */
+body {
+font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+font-size: theme('fontSize.base');
+line-height: 1.6;
+color: theme('colors.gray.700');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-weight: 700;
+line-height: 1.2;
+margin-bottom: 0.5em;
+}
+
+h1 {
+font-size: 2.5rem;
+}
+
+h2 {
+font-size: 2rem;
+}
+
+h3 {
+font-size: 1.75rem;
+}
+
+h4 {
+font-size: 1.5rem;
+}
+
+h5 {
+font-size: 1.25rem;
+}
+
+h6 {
+font-size: 1rem;
+}
+
+p {
+margin-bottom: 1em;
+}
+
+/* Color Palette and Theming */
+:root {
+--primary-color: theme('colors.blue.500');
+--secondary-color: theme('colors.gray.100');
+--accent-color: theme('colors.yellow.400');
+--bg-color: #ffffff;
+--text-color: #222222;
+--dark-bg-color: #1a202c;
+--dark-text-color: #ffffff;
+--code-bg-color: #edf2f7;
+--code-text-color: #2d3748;
+}
+
+body.dark-mode {
+--bg-color: var(--dark-bg-color);
+--text-color: var(--dark-text-color);
+}
+
+/* Layout Defaults */
+body {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* 3D Canvas Integration */
+canvas {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+outline: none;
+}
+
+/* Animation Coordination */
+:root {
+--transition-duration: theme('transitionDuration.DEFAULT');
+--transition-easing: theme('transitionTimingFunction.DEFAULT');
+}
+
+/* Performance Enhancements */
+.will-change-transform {
+will-change: transform;
+}
+
+.will-change-opacity {
+will-change: opacity;
+}
+
+.will-change-filter {
+will-change: filter;
+}
+
+.hardware-accelerated {
+transform: translateZ(0);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+body {
+font-size: 14px;
+}
+
+h1 {
+font-size: 2rem;
+}
+
+h2 {
+font-size: 1.5rem;
+}
+
+h3 {
+font-size: 1.25rem;
+}
+}
+
+/* Accessibility */
+:focus-visible {
+outline: 2px solid var(--accent-color);
+outline-offset: 2px;
+}
+
+/* Theming (Example - Adjust colors based on dark mode) */
+body.dark-mode {
+background-color: var(--dark-bg-color);
+color: var(--dark-text-color);
+}
