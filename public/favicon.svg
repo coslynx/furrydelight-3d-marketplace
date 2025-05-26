@@ -1,0 +1,5 @@
+<svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<title>FurryDelight Favicon</title>
+<circle cx="64" cy="64" r="64" class="fill-primary-color"/>
+<path d="M40 32C40 32 24 48 24 64C24 80 40 96 64 96C88 96 104 80 104 64C104 48 88 32 64 32C56 32 48 32 40 32Z" class="fill-secondary-color stroke-text-color stroke-2" stroke="currentColor" fill="currentColor"/>
+</svg>
